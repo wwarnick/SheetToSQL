@@ -45,3 +45,8 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Ignore .vs/, bin/, and obj/ directories
+.vs/
+bin/
+obj/
