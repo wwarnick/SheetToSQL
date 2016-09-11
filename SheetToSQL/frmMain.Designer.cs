@@ -36,6 +36,7 @@
 			this.pnlFile = new System.Windows.Forms.Panel();
 			this.lblProgress = new System.Windows.Forms.Label();
 			this.pnlSettings = new System.Windows.Forms.Panel();
+			this.lblSQLRecurring = new System.Windows.Forms.Label();
 			this.txtSQLFirstLine = new System.Windows.Forms.TextBox();
 			this.txtSQLRecur = new System.Windows.Forms.TextBox();
 			this.pnlColumn = new System.Windows.Forms.Panel();
@@ -43,7 +44,7 @@
 			this.btnSaveAs = new System.Windows.Forms.Button();
 			this.dlgOpen = new System.Windows.Forms.OpenFileDialog();
 			this.dlgSaveAs = new System.Windows.Forms.SaveFileDialog();
-			this.lblSQLRecurring = new System.Windows.Forms.Label();
+			this.btnHelp = new System.Windows.Forms.Button();
 			this.pnlFile.SuspendLayout();
 			this.pnlSettings.SuspendLayout();
 			this.pnlColumn.SuspendLayout();
@@ -51,9 +52,10 @@
 			// 
 			// btnOpen
 			// 
-			this.btnOpen.Location = new System.Drawing.Point(12, 12);
+			this.btnOpen.Location = new System.Drawing.Point(16, 15);
+			this.btnOpen.Margin = new System.Windows.Forms.Padding(4);
 			this.btnOpen.Name = "btnOpen";
-			this.btnOpen.Size = new System.Drawing.Size(75, 23);
+			this.btnOpen.Size = new System.Drawing.Size(100, 28);
 			this.btnOpen.TabIndex = 0;
 			this.btnOpen.Text = "Open...";
 			this.btnOpen.UseVisualStyleBackColor = true;
@@ -63,9 +65,10 @@
 			// 
 			this.lstColumns.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
 			this.lstColumns.FormattingEnabled = true;
-			this.lstColumns.Location = new System.Drawing.Point(11, 42);
+			this.lstColumns.Location = new System.Drawing.Point(15, 52);
+			this.lstColumns.Margin = new System.Windows.Forms.Padding(4);
 			this.lstColumns.Name = "lstColumns";
-			this.lstColumns.Size = new System.Drawing.Size(149, 173);
+			this.lstColumns.Size = new System.Drawing.Size(197, 212);
 			this.lstColumns.TabIndex = 0;
 			this.lstColumns.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.lstColumns_DrawItem);
 			this.lstColumns.SelectedIndexChanged += new System.EventHandler(this.lstColumns_SelectedIndexChanged);
@@ -73,9 +76,10 @@
 			// lblSQLFirstLine
 			// 
 			this.lblSQLFirstLine.AutoSize = true;
-			this.lblSQLFirstLine.Location = new System.Drawing.Point(2, 14);
+			this.lblSQLFirstLine.Location = new System.Drawing.Point(3, 17);
+			this.lblSQLFirstLine.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblSQLFirstLine.Name = "lblSQLFirstLine";
-			this.lblSQLFirstLine.Size = new System.Drawing.Size(76, 13);
+			this.lblSQLFirstLine.Size = new System.Drawing.Size(102, 17);
 			this.lblSQLFirstLine.TabIndex = 5;
 			this.lblSQLFirstLine.Text = "SQL First Line:";
 			// 
@@ -83,17 +87,19 @@
 			// 
 			this.cmbBlankBehavior.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmbBlankBehavior.FormattingEnabled = true;
-			this.cmbBlankBehavior.Location = new System.Drawing.Point(141, 89);
+			this.cmbBlankBehavior.Location = new System.Drawing.Point(188, 110);
+			this.cmbBlankBehavior.Margin = new System.Windows.Forms.Padding(4);
 			this.cmbBlankBehavior.Name = "cmbBlankBehavior";
-			this.cmbBlankBehavior.Size = new System.Drawing.Size(121, 21);
+			this.cmbBlankBehavior.Size = new System.Drawing.Size(160, 24);
 			this.cmbBlankBehavior.TabIndex = 6;
 			// 
 			// lblBlankBehavior
 			// 
 			this.lblBlankBehavior.AutoSize = true;
-			this.lblBlankBehavior.Location = new System.Drawing.Point(23, 92);
+			this.lblBlankBehavior.Location = new System.Drawing.Point(31, 113);
+			this.lblBlankBehavior.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblBlankBehavior.Name = "lblBlankBehavior";
-			this.lblBlankBehavior.Size = new System.Drawing.Size(112, 13);
+			this.lblBlankBehavior.Size = new System.Drawing.Size(147, 17);
 			this.lblBlankBehavior.TabIndex = 7;
 			this.lblBlankBehavior.Text = "Blank Value Behavior:";
 			// 
@@ -105,16 +111,19 @@
 			this.pnlFile.Controls.Add(this.pnlColumn);
 			this.pnlFile.Controls.Add(this.btnSaveAs);
 			this.pnlFile.Controls.Add(this.lstColumns);
-			this.pnlFile.Location = new System.Drawing.Point(1, -1);
+			this.pnlFile.Location = new System.Drawing.Point(0, 0);
+			this.pnlFile.Margin = new System.Windows.Forms.Padding(4);
+			this.pnlFile.MinimumSize = new System.Drawing.Size(879, 271);
 			this.pnlFile.Name = "pnlFile";
-			this.pnlFile.Size = new System.Drawing.Size(659, 220);
+			this.pnlFile.Size = new System.Drawing.Size(879, 271);
 			this.pnlFile.TabIndex = 8;
 			// 
 			// lblProgress
 			// 
-			this.lblProgress.Location = new System.Drawing.Point(173, 13);
+			this.lblProgress.Location = new System.Drawing.Point(231, 16);
+			this.lblProgress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblProgress.Name = "lblProgress";
-			this.lblProgress.Size = new System.Drawing.Size(260, 23);
+			this.lblProgress.Size = new System.Drawing.Size(347, 28);
 			this.lblProgress.TabIndex = 15;
 			// 
 			// pnlSettings
@@ -124,25 +133,38 @@
 			this.pnlSettings.Controls.Add(this.txtSQLFirstLine);
 			this.pnlSettings.Controls.Add(this.txtSQLRecur);
 			this.pnlSettings.Controls.Add(this.lblSQLFirstLine);
-			this.pnlSettings.Location = new System.Drawing.Point(439, 4);
+			this.pnlSettings.Location = new System.Drawing.Point(585, 5);
+			this.pnlSettings.Margin = new System.Windows.Forms.Padding(4);
 			this.pnlSettings.Name = "pnlSettings";
-			this.pnlSettings.Size = new System.Drawing.Size(218, 216);
+			this.pnlSettings.Size = new System.Drawing.Size(291, 266);
 			this.pnlSettings.TabIndex = 13;
+			// 
+			// lblSQLRecurring
+			// 
+			this.lblSQLRecurring.AutoSize = true;
+			this.lblSQLRecurring.Location = new System.Drawing.Point(5, 135);
+			this.lblSQLRecurring.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblSQLRecurring.Name = "lblSQLRecurring";
+			this.lblSQLRecurring.Size = new System.Drawing.Size(106, 17);
+			this.lblSQLRecurring.TabIndex = 8;
+			this.lblSQLRecurring.Text = "SQL Recurring:";
 			// 
 			// txtSQLFirstLine
 			// 
-			this.txtSQLFirstLine.Location = new System.Drawing.Point(5, 30);
+			this.txtSQLFirstLine.Location = new System.Drawing.Point(7, 37);
+			this.txtSQLFirstLine.Margin = new System.Windows.Forms.Padding(4);
 			this.txtSQLFirstLine.Multiline = true;
 			this.txtSQLFirstLine.Name = "txtSQLFirstLine";
-			this.txtSQLFirstLine.Size = new System.Drawing.Size(205, 77);
+			this.txtSQLFirstLine.Size = new System.Drawing.Size(272, 94);
 			this.txtSQLFirstLine.TabIndex = 7;
 			// 
 			// txtSQLRecur
 			// 
-			this.txtSQLRecur.Location = new System.Drawing.Point(5, 127);
+			this.txtSQLRecur.Location = new System.Drawing.Point(7, 156);
+			this.txtSQLRecur.Margin = new System.Windows.Forms.Padding(4);
 			this.txtSQLRecur.Multiline = true;
 			this.txtSQLRecur.Name = "txtSQLRecur";
-			this.txtSQLRecur.Size = new System.Drawing.Size(205, 82);
+			this.txtSQLRecur.Size = new System.Drawing.Size(272, 100);
 			this.txtSQLRecur.TabIndex = 6;
 			// 
 			// pnlColumn
@@ -151,9 +173,10 @@
 			this.pnlColumn.Controls.Add(this.lblHeaderName);
 			this.pnlColumn.Controls.Add(this.cmbBlankBehavior);
 			this.pnlColumn.Controls.Add(this.lblBlankBehavior);
-			this.pnlColumn.Location = new System.Drawing.Point(166, 42);
+			this.pnlColumn.Location = new System.Drawing.Point(221, 52);
+			this.pnlColumn.Margin = new System.Windows.Forms.Padding(4);
 			this.pnlColumn.Name = "pnlColumn";
-			this.pnlColumn.Size = new System.Drawing.Size(271, 178);
+			this.pnlColumn.Size = new System.Drawing.Size(361, 219);
 			this.pnlColumn.TabIndex = 12;
 			// 
 			// lblHeaderName
@@ -161,17 +184,19 @@
 			this.lblHeaderName.BackColor = System.Drawing.SystemColors.InactiveCaption;
 			this.lblHeaderName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblHeaderName.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-			this.lblHeaderName.Location = new System.Drawing.Point(3, 3);
+			this.lblHeaderName.Location = new System.Drawing.Point(4, 4);
+			this.lblHeaderName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblHeaderName.Name = "lblHeaderName";
-			this.lblHeaderName.Size = new System.Drawing.Size(265, 23);
+			this.lblHeaderName.Size = new System.Drawing.Size(353, 28);
 			this.lblHeaderName.TabIndex = 14;
 			this.lblHeaderName.Text = "lblHeaderName";
 			// 
 			// btnSaveAs
 			// 
-			this.btnSaveAs.Location = new System.Drawing.Point(92, 13);
+			this.btnSaveAs.Location = new System.Drawing.Point(123, 16);
+			this.btnSaveAs.Margin = new System.Windows.Forms.Padding(4);
 			this.btnSaveAs.Name = "btnSaveAs";
-			this.btnSaveAs.Size = new System.Drawing.Size(75, 23);
+			this.btnSaveAs.Size = new System.Drawing.Size(100, 28);
 			this.btnSaveAs.TabIndex = 9;
 			this.btnSaveAs.Text = "Save As...";
 			this.btnSaveAs.UseVisualStyleBackColor = true;
@@ -187,22 +212,25 @@
 			this.dlgSaveAs.DefaultExt = "sql";
 			this.dlgSaveAs.Filter = "SQL Files|*.sql";
 			// 
-			// lblSQLRecurring
+			// btnHelp
 			// 
-			this.lblSQLRecurring.AutoSize = true;
-			this.lblSQLRecurring.Location = new System.Drawing.Point(4, 110);
-			this.lblSQLRecurring.Name = "lblSQLRecurring";
-			this.lblSQLRecurring.Size = new System.Drawing.Size(80, 13);
-			this.lblSQLRecurring.TabIndex = 8;
-			this.lblSQLRecurring.Text = "SQL Recurring:";
+			this.btnHelp.Location = new System.Drawing.Point(507, 18);
+			this.btnHelp.Name = "btnHelp";
+			this.btnHelp.Size = new System.Drawing.Size(75, 23);
+			this.btnHelp.TabIndex = 9;
+			this.btnHelp.Text = "Help";
+			this.btnHelp.UseVisualStyleBackColor = true;
+			this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
 			// 
 			// frmMain
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(662, 224);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.ClientSize = new System.Drawing.Size(883, 276);
+			this.Controls.Add(this.btnHelp);
 			this.Controls.Add(this.btnOpen);
 			this.Controls.Add(this.pnlFile);
+			this.Margin = new System.Windows.Forms.Padding(4);
+			this.MaximizeBox = false;
 			this.Name = "frmMain";
 			this.Text = "SQLBuilder";
 			this.Load += new System.EventHandler(this.frmMain_Load);
@@ -234,6 +262,7 @@
 		private System.Windows.Forms.TextBox txtSQLFirstLine;
 		private System.Windows.Forms.Label lblProgress;
 		private System.Windows.Forms.Label lblSQLRecurring;
+		private System.Windows.Forms.Button btnHelp;
 	}
 }
 

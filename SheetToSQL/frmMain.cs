@@ -286,7 +286,7 @@ namespace SheetToSQL
 							}
 							else
 							{
-								val = "'" + line[col].Replace("'", @"\'") + "'";
+								val = line[col].Replace("'", @"\'");
 							}
 
 							statement.Append(val);
@@ -809,5 +809,10 @@ namespace SheetToSQL
 		}
 
 		#endregion CSV Methods
+
+		private void btnHelp_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("This works like C#'s string.Format().\n\n1. Open a spreadsheet (xls, xlsx, or csv).\n\n2. Fill the \"SQL First Line\" and \"SQL Recurring\" textboxes.\n\n3. Make sure the blank value behavior is correct for each field (blanks can stay blank or be null).\n\n4. Generate the SQL.\n\n\"SQL First Line\" is the first line in the generated SQL. \"SQL Recurring\" is repeated for every record. Put the number of the field in curly brackets (ie. {0}) like you would in string.Format(). For example, the first line could be \"INSERT INTO `creditors` (`name`) VALUES\" and the recurring line could be \"({0}),\".\n\nThe generated SQL might need to be touched up. In the example, after generating the SQL, I would go into the file and replace the final comma with a semi-colon. In other cases, you might surround the value in quotes, which would make blank values equal 'NULL', appearing to be a string. In this case, you would replace all 'NULL' with NULL.");
+		}
 	}
 }
